@@ -59,6 +59,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        cd  openwrt
         #插入代码到 Makefile 文件中
         sed -i '/^# check prerequisites before starting to build$/a\
         \
