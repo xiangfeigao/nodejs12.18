@@ -26,9 +26,9 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
+  UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
@@ -36,7 +36,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -60,6 +59,17 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        #插入代码到 Makefile 文件中
+        sed -i '/^# check prerequisites before starting to build$/a\
+        \
+        define Build/Prepare\
+        #下载 Node.js v0.12.18\
+        $(call Download,https://nodejs.org/dist/v0.12.18/node-v0.12.18-linux-x86.tar.gz, \
+        $(DL_DIR)/node-v0.12.18-linux-x86.tar.gz)\
+        #安装 Node.js v0.12.18\
+        mkdir -p $(STAGING_DIR)/opt\
+        tar -C $(STAGING_DIR)/opt -xzf $(DL_DIR)/node-v0.12.18-linux-x86.tar.gz\
+        endef' Makefile        
 
     - name: Load custom feeds
       run: |
