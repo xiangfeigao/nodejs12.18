@@ -52,9 +52,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        sudo nvm install 0.12.18
-
-
+        
     - name: Clone source code
       working-directory: /workdir
       run: |
