@@ -187,4 +187,4 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.aaa_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HC5962_TOKEN }}
