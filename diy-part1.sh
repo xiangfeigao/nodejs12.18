@@ -17,8 +17,8 @@
 # echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 # theme argon
- rm -rf  package/lean/luci-theme-argon 
- git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
+# rm -rf  package/lean/luci-theme-argon 
+# git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
 
 
 # aoo filter
