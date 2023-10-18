@@ -28,14 +28,14 @@
 # git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 # git clone https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
 # add OpenClash
- git clone https://github.com/vernesong/OpenClash package/OpenClash
+# git clone https://github.com/vernesong/OpenClash package/OpenClash
 # add smartdns
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns   package/luci-app-smartdns
 
 # Kernel版本控制
 # sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 # add frp
-# git clone https://github.com/fatedier/frp package/frp
+ git clone https://github.com/fatedier/frp package/frp
 
 
 
