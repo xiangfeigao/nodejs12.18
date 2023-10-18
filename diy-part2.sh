@@ -10,8 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 # Update date
-cur_date="`date +%Y-%m-%d`"
-sed -i "s/R2[.0-9-]*/R$cur_date/g" package/lean/default-settings/files/zzz-default-settings
+# cur_date="`date +%Y-%m-%d`"
+# sed -i "s/R2[.0-9-]*/R$cur_date/g" package/lean/default-settings/files/zzz-default-settings
 
 
 # Modify default IP
