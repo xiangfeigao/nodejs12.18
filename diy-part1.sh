@@ -17,8 +17,8 @@
 # echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 # theme argon
- rm -rf  package/lean/luci-theme-argon 
- git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
+# rm -rf  package/lean/luci-theme-argon 
+# git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
 
 
 # aoo filter
@@ -35,7 +35,7 @@
 # Kernel版本控制
 # sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 # add frp
- git clone https://github.com/fatedier/frp package/frp
+# git clone https://github.com/fatedier/frp package/frp
 
 
 
