@@ -13,12 +13,12 @@
 # Uncomment a feed source
 
 # add helloworld
-# sed -i "/helloworld/d" "feeds.conf.default"
-# echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+ sed -i "/helloworld/d" "feeds.conf.default"
+ echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 # theme argon
- rm -rf  package/lean/luci-theme-argon 
- git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
+# rm -rf  package/lean/luci-theme-argon 
+# git clone  https://github.com/jerrykuku/luci-theme-argon  package/lean/luci-theme-argon
 
 
 # aoo filter
@@ -36,7 +36,7 @@
 # sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
 # add frp
 # rm -rf  package/lean/frp
-# git clone https://github.com/fatedier/frp package/lean/frp
+ git clone https://github.com/fatedier/frp package/lean/frp
 
 
 
