@@ -33,7 +33,7 @@
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns   package/luci-app-smartdns
 
 # Kernel版本控制
-# sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
+ sed -i "s/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.15/g" target/linux/ramips/Makefile
 # add frp
 # rm -rf  package/lean/frp
  # git clone https://github.com/fatedier/frp package/lean/frp
